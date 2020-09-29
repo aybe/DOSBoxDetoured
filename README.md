@@ -27,7 +27,11 @@ Ideas:
 - rename imported function (`NtVdm64CreateProcessInternalW`) in `KernelBase.dll` ?
 - hook into `NtVdm64CreateProcessInternalW` as soon as it's loaded by `KernelBase.dll` ?
   - not sure if possible at all and how it could be done
-  
+
+### Addendum
+
+Actually, `NtVdm64RaiseInvalid16BitError` is also indirectly called in `Kernel32.dll`, it is called by `RaiseInvalid16BitExeError` which in turn is called by `BasepProcessInvalidImage`.
+
 ## Notes
 
 Process Explorer finds absolutely nothing about `ntvdm64.dll` when the `16-bit application not supported...` message is visible.
