@@ -34,6 +34,8 @@ Actually, `NtVdm64RaiseInvalid16BitError` is also indirectly called in `Kernel32
 
 ## Notes
 
+Searching the web for `"CreateProcessInternalW" hook` and `"CreateProcessInternalW" detours` yields some interesting results.
+
 Process Explorer finds absolutely nothing about `ntvdm64.dll` when the `16-bit application not supported...` message is visible.
 
 It might be tempting to create a C++/CLI project but apparently this isn't the best thing to do:
